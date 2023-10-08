@@ -1,0 +1,936 @@
+:root{
+    --black: #000000;
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+    width: 98%;
+    margin: 0 auto;
+}
+
+header{
+    height: 10vh;
+    background-color: var(--black);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header  img {
+    height: 10vh;
+}
+
+header > a {
+    height: 10vh;
+}
+
+
+nav{
+    width: 65%;
+    margin-right: 20px;
+}
+
+nav > ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Rosario;
+    font-style: italic;
+    font-size: 20px;
+}
+
+nav a{
+    color: #FFFCFC;
+    text-decoration: none;
+}
+
+.gallery{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center_left img, .center_right img{
+    height: 270px;
+    width: 350px;
+    margin-bottom: 15px;
+}
+
+.left_card img, .right_card img{
+    height: 400px;
+    width: 280px;
+}
+
+.center_left {
+    margin-top: 15px;
+    animation: animation_left_part 1s linear forwards;
+    position: relative;
+    
+}
+
+.left_card{
+    animation: animation_left_part 2s forwards;
+    position: relative;
+}
+
+.center_right {
+    margin-top: 15px;
+    animation: animation_right_part 1s linear forwards;
+    position: relative;
+    
+}
+
+.right_card{
+    animation: animation_right_part 2s forwards;
+    position: relative;
+}
+
+@keyframes animation_left_part{
+    0% { left: -700px; }
+    100% { left: 0px; }   
+}
+
+@keyframes animation_right_part{
+    0% {right: -700px;}
+    100% {right: 0px;}
+}
+
+.screen{
+    min-height: 90vh;
+}
+
+p{
+    margin: 0;
+}
+
+.services{
+    display: flex;
+}
+
+.ellipse_box{
+    font-family: Rosario;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.left_ellipse_column, .right_ellipse_column{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 33%;
+}
+
+.p_2_right_img img{
+    width: 550px;
+    height: 90vh;
+}
+
+.left_ellipse_column img, .right_ellipse_column img{
+    max-width: 100%;
+    margin-top: 30px;
+    height: 30vh;
+}
+
+@keyframes animation_first_ellipse{
+    0% {
+        transform: translate(0%);
+    }
+    25% {
+        transform: translate(200%, 0%);
+    }
+    50% {
+        transform: translate(200%, 100%);
+    }
+    75% {
+        transform: translate(0%, 100%);
+    }
+    100% {
+        transform: translate(0%);
+    }
+}
+
+.first_ellipse{
+    animation: animation_first_ellipse 10s infinite;
+    position: relative;
+}
+
+.text{
+    text-align: center;
+}
+
+@keyframes animation_second_ellipse{
+    0% {
+        transform: translate(0%);
+    }
+    25% {
+        transform: translate(0%, -100%);
+    }
+    50% {
+        transform: translate(200%, -100%);
+    }
+    75% {
+        transform: translate(200%, 0%);
+    }
+    100% {
+        transform: translate(0%);
+    }
+}
+
+.second_ellipse{
+    animation: animation_second_ellipse 10s infinite;
+    position: relative;
+}
+
+@keyframes animation_third_ellipse{
+    0% {
+        transform: translate(0%);
+    }
+    25% {
+        transform: translate(0%, 100%);
+    }
+    50% {
+        transform: translate(-200%, 100%);
+    }
+    70% {
+        transform: translate(-200%, 0%);
+    }
+    100% {
+        transform: translate(0%);
+    }
+}
+
+.third_ellipse{
+    animation: animation_third_ellipse 10s infinite;
+    position: relative;
+}
+
+@keyframes animation_fourth_ellipse{
+    0% {
+        transform: translate(0%);
+    }
+    25% {
+        transform: translate(-200%, 0%);
+    }
+    50% {
+        transform: translate(-200%, -100%);
+    }
+    75% {
+        transform: translate(0%, -100%);
+    }
+    100% {
+        transform: translate(0%);
+    }
+}
+
+.fourth_ellipse{
+    animation: animation_fourth_ellipse 10s infinite;
+    position: relative;
+}
+
+.team_tittle{
+    font-family: Rosario;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 116px;
+    text-align: center;
+}
+
+.card{
+    width: 20%;
+    height: 440px;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.team_members{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.member_1{
+    background-image: url(../img/team_member_1.png);
+}
+
+.member_2{
+    background-image: url(../img/team_member_2.png);
+}
+
+.member_3{
+    background-image: url(../img/team_member_3.png);
+}
+
+.member_4{
+    background-image: url(../img/team_member_4.png);
+}
+
+.name{
+    background-color: rgba(163, 83, 10, 0.7);
+    border-radius: 0px 0px 28px 28px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Volkhov;
+    font-size: 35px;
+    color: #FFFAFA;
+    height: 0;
+    overflow: hidden;
+}
+
+.card:hover .name{
+    height: 100px;
+    transition: all 1s;
+}
+
+/* filter: grayscale(60%); */
+
+html:hover .card:not(:hover){
+    filter: grayscale(60%)
+}
+
+.contact{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+.left_box{
+    width: 45%;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_title{
+    font-family: Rosario;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 44px;
+    text-align: center;
+}
+
+textarea{
+    resize: none;
+    width: -webkit-fill-available;
+    height: 80px;
+    border-width: 7px 18.8px 20px;
+    border-color: #E5E5E5;
+    border-style: solid;
+    outline: none;
+}
+
+.input_name_email{
+    display: flex;
+}
+
+input{
+    width: 40%;
+    height: 40px;
+    border-width: 20px;
+    border-color: #E5E5E5;
+    border-style: solid;
+    float: left;
+    outline: none;
+}
+
+form{
+    margin-top: 28px;
+}
+
+::placeholder{
+    font-family: Rosario;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.right_box{
+    width: 40%;
+}
+
+.footer_column{
+    font-family: Rosario;
+    font-size: 20px;
+    line-height: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 95px;
+}
+
+._700{
+    font-weight: 700;
+}
+
+._600_it{
+    font-weight: 600;
+    font-style: italic;
+}
+
+.hours{
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.connect{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.ico_column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 15px;
+}
+
+.text_social{
+    display: flex;
+    flex-direction: column;
+}
+
+.connect_column{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+    .screen{
+        min-height: 100vh;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .left_card, .right_card {
+        margin-top: 10px;
+    }
+
+    .left_card {
+        animation: animation_left 1.5s forwards;
+        order: 1;
+        width: 36%;
+    }
+
+    .right_card {
+        animation: animation_right 1.5s forwards;
+        order: 2;
+    }
+
+    .center_left {
+        animation: animation_left 1.5s forwards;
+        order: 3;
+    }
+
+    .center_right {
+        animation: animation_right 1.5s forwards;
+        order: 4;
+    }
+
+    @keyframes animation_left {
+        0% {
+            transform: translate(-770%)
+        }
+
+        100%{
+            transform: translate(0%);
+        }
+    }
+
+    @keyframes animation_right {
+        0% {
+            transform: translate(770%);
+        }
+
+        100%{
+            transform: translate(0%);
+        }
+    }
+
+    .p_2_right_img img {
+        width: 100%;
+        height: 90vh;
+    }
+
+    .p_2_right_img {
+        order: 1;
+    }
+
+    .ellipse_box {
+        order: 2;
+    }
+
+    .services {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    @keyframes animation_first_ellipse{
+        0% {
+            transform: translate(0%);
+        }
+        25% {
+            transform: translate(228%, 0%);
+        }
+        50% {
+            transform: translate(228%, 100%);
+        }
+        75% {
+            transform: translate(0%, 100%);
+        }
+        100% {
+            transform: translate(0%);
+        }
+    }
+
+    @keyframes animation_second_ellipse{
+        0% {
+            transform: translate(0%);
+        }
+        25% {
+            transform: translate(0%, -100%);
+        }
+        50% {
+            transform: translate(228%, -100%);
+        }
+        75% {
+            transform: translate(228%, 0%);
+        }
+        100% {
+            transform: translate(0%);
+        }
+    }
+
+    @keyframes animation_third_ellipse{
+        0% {
+            transform: translate(0%);
+        }
+        25% {
+            transform: translate(0%, 100%);
+        }
+        50% {
+            transform: translate(-176%, 100%);
+        }
+        70% {
+            transform: translate(-176%, 0%);
+        }
+        100% {
+            transform: translate(0%);
+        }
+    }
+
+    @keyframes animation_fourth_ellipse{
+        0% {
+            transform: translate(0%);
+        }
+        25% {
+            transform: translate(-176%, 0%);
+        }
+        50% {
+            transform: translate(-176%, -100%);
+        }
+        75% {
+            transform: translate(0%, -100%);
+        }
+        100% {
+            transform: translate(0%);
+        }
+    }
+
+    .team {
+        margin-top: 100px;
+    }
+
+    .team_members {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-between;
+        height: 141vh;
+    }
+
+    .card {
+        width: 34%;
+        height: 85vh;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left_box {
+        order: 1;
+        width: 60%; 
+    }
+
+    .right_box {
+        order: 2;
+        width: 85%;
+        height: 80vh;
+        margin-top: 25px;
+    }
+
+    .footer_column {
+        text-align: center;
+        margin-top: 110px;
+    }  
+
+    .footer {
+        display: flex;
+        margin-top: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .connect_column {
+        margin-top: 48px;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .screen {
+        min-height: 90vh;
+    }
+
+    nav > ul {
+        font-size: 15px;
+    }
+
+    .gallery {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-height: 380vh;
+        justify-content:unset;
+    }
+
+    .left_card {
+        animation: animation_left 1.5s forwards;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        order: 1;
+    }
+
+    .right_card {
+        animation: animation_right 1.5s forwards;
+        order: 2;
+        margin-bottom: 15px;
+    }
+
+    .center_left, .center_right {
+        margin: 0;
+    }
+
+    .center_left {
+        order: 3;
+    }
+
+    .center_right {
+        order: 4;
+    }
+
+    .center_left {
+        animation: unset;
+    }
+
+    .center_right {
+        animation: unset;
+    }
+
+    p:first-of-type {
+        animation: animation_left 1.5s forwards !important;
+    }
+
+    p:last-of-type {
+        animation: animation_right 1.5s forwards !important;
+    }
+
+    .services {
+        margin-top: unset;
+    }
+
+    @keyframes animation_left {
+        0% {
+            transform: translate(-770%)
+        }
+
+        100%{
+            transform: translate(0%);
+        }
+    }
+    
+    @keyframes animation_right {
+        0% {
+            transform: translate(770%);
+        }
+
+        100%{
+            transform: translate(0%);
+        }
+    }
+
+    @keyframes animation_first_ellipse{
+        0% {
+            transform: translate(0%);
+        }
+        25% {
+            transform: translate(185%, 0%);
+        }
+        50% {
+            transform: translate(185%, 100%);
+        }
+        75% {
+            transform: translate(0%, 100%);
+        }
+        100% {
+            transform: translate(0%);
+        }
+    }
+
+    @keyframes animation_second_ellipse{
+        0% {
+            transform: translate(0%);
+        }
+        25% {
+            transform: translate(0%, -100%);
+        }
+        50% {
+            transform: translate(185%, -100%);
+        }
+        75% {
+            transform: translate(185%, 0%);
+        }
+        100% {
+            transform: translate(0%);
+        }
+    }
+
+    @keyframes animation_third_ellipse{
+        0% {
+            transform: translate(0%);
+        }
+        25% {
+            transform: translate(0%, 100%);
+        }
+        50% {
+            transform: translate(-140%, 100%);
+        }
+        70% {
+            transform: translate(-140%, 0%);
+        }
+        100% {
+            transform: translate(0%);
+        }
+    }
+
+    @keyframes animation_fourth_ellipse{
+        0% {
+            transform: translate(0%);
+        }
+        25% {
+            transform: translate(-140%, 0%);
+        }
+        50% {
+            transform: translate(-140%, -100%);
+        }
+        75% {
+            transform: translate(0%, -100%);
+        }
+        100% {
+            transform: translate(0%);
+        }
+    }
+
+    .p_2_right_img {
+        width: 0;
+        height: 0;
+    }
+
+    .team_members {
+        display: flex;
+        margin-top: 25px;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: unset;
+        justify-content: unset;
+        height: auto;
+    }
+
+    .card {
+        width: 45%;
+        height: 85vh;
+        margin-bottom: 32px;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left_box {
+        order: 2;
+        width: 60%;
+        margin-top: 25px;
+    }
+
+    .right_box {
+        order: 1;
+        width: 85%;
+        height: 80vh;
+    }
+
+    .footer_column {
+        text-align: center;
+        margin-top: 110px;
+    }  
+
+    .footer {
+        display: flex;
+        margin-top: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .connect_column {
+        margin-top: 48px;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+
+@media screen and (min-width: 992px) {
+
+    .left_card, .right_card {
+        width: 20%;
+    }
+
+    .center_left, .center_right {
+        width: 25%;
+    }
+
+    .left_card img, .right_card img, .center_left img, .center_right img {
+        width: 100%;
+        height: auto;
+    }
+
+    .center_left img, .center_right img {
+        height: 40vh;
+    }
+
+    .left_ellipse_column img, .right_ellipse_column img {
+        height: 23vh;
+    }
+
+    .ellipse_box {
+        font-size: 20px;
+    }
+
+    .p_2_right_img img {
+        width: 100%;
+    }
+
+    .card {
+        width: 24%;
+        min-height: 70vh;
+    }
+
+    .left_box {
+        width: 45%;
+    }
+
+    .footer {
+        margin-top: 150px;
+        margin-bottom: 20px;
+    }
+
+    .services, .team, .contact{
+        margin-top: 10vh;
+    }
+
+}
+
+@media screen and (min-width: 1620px) {
+    .card {
+        min-height: 70vh;
+        max-width: 22%;
+    }
+
+    .container{
+        width: calc(100% - 100px);
+        margin: 0 auto;
+    }
+
+    nav > ul {
+        font-size: 30px;
+    }
+
+    .footer {
+        margin-top: 25vh;
+        
+    }
+
+    .services, .team, .contact{
+        margin-top: 10vh;
+    }
+
+    .p_2_right_img img {
+        width: auto;
+    }
+
+    input {
+        height: 5vh;
+        width: -webkit-fill-available;
+    }
+
+    textarea {
+        height: 20vh;
+        width: 36vw;
+    }
+
+}
